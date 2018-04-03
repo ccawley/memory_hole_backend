@@ -1,0 +1,26 @@
+{
+  "name": "memory_hole_backend",
+  "version": "1.0.0",
+  "description": "A daily all-in-one react app that helps you set yourself up to have as happy and productive a day as possible. Also serves as a daily gratitude tracker and journal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccawley/memory_hole_backend.git"
+  },
+  "author": "Curtis Cawley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccawley/memory_hole_backend/issues"
+  },
+  "homepage": "https://github.com/ccawley/memory_hole_backend#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "npm": "^5.8.0"
+  }
+}
