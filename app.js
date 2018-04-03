@@ -11,7 +11,10 @@ app.disable('x-powered-by');
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-//Routes go below here:
+// Example from q3 below...
+const { /*UsersRouter, AuthRouter*/ } = require('./routes')
+// app.use('/users', UsersRouter)
+// app.use('/auth', AuthRouter)
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;
