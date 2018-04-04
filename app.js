@@ -11,10 +11,10 @@ app.disable('x-powered-by');
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-// Example from q3 below...
-const { /*UsersRouter, AuthRouter*/ } = require('./routes')
-// app.use('/users', UsersRouter)
-// app.use('/auth', AuthRouter)
+
+/*const { TestRouter q3ex:UsersRouter, } = require('./routes')
+app.use('/test', TestRouter)
+q3ex:app.use('/users', UsersRouter)*/
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;

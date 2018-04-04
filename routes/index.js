@@ -1,8 +1,6 @@
-module.exports = {
+/*module.exports = {
+  TestRouter: require('./test-routes')
   // Example from q3 below...
 
   // UsersRouter: require('./users.routes'),
-  // AuthRouter: require('./auth.routes'),
-  // CommitsRouter: require('./commits.routes'),
-  // LikesRouter: require('./likes.routes')
-}
+}*/
