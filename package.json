@@ -4,7 +4,9 @@
   "description": "A daily all-in-one react app that helps you set yourself up to have as happy and productive a day as possible. Also serves as a daily gratitude tracker and journal.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
