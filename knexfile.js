@@ -6,7 +6,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: `postgres://localhost/${process.env.memory-hole}`,
+    connection: `postgres://localhost/${process.env.DATABASE_NAME}`,
     migrations: {
       directory: path.join(__dirname, 'db', 'migrations')
     },
