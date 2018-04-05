@@ -6,6 +6,7 @@ class UsersController {
   static message (req, res, next) {
     User.getUser()
       .then(user => {
+        // console.log(user)
         return res.json({ user })
       })
       .catch(err => {
