@@ -12,9 +12,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 
-/*const { TestRouter q3ex:UsersRouter, } = require('./routes')
-app.use('/test', TestRouter)
-q3ex:app.use('/users', UsersRouter)*/
+const { UsersRouter } = require('./routes')
+app.use('/users', UsersRouter)
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;
