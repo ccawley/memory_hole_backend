@@ -18,7 +18,7 @@ exports.seed = function(knex, Promise) {
           goal_microtarget_2: 'Incididunt ut labore et dolore magna aliqua.',
           goal_microtarget_3: 'Nisi ut aliquip ex ea commodo consequat.',
           // selfie_url: 'https://lh3.googleusercontent.com/-1s11c-YdLtc/VWdF8ypoweI/AAAAAAAAcXY/9jVu8DOBhvg/s640/blogger-image-2118592173.jpg',
-          did_have_breakfast: true,
+          had_breakfast: true,
           did_exercise: true,
           inspirational_quote: '"If you put that straight jacket on me, I am going to pull your endocrine system out of your body." ~ Gary Busey'
         }
