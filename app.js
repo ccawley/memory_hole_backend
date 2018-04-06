@@ -14,6 +14,15 @@ app.use(bodyParser.json());
 const { UsersRouter } = require('./routes')
 app.use('/user', UsersRouter)
 
+const axios = require('axios')
+app.get('/quote', (req, res, next) => {
+  axios.get('http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en')
+  .then((result) => {
+    console.log(result.data);
+    res.json(result.data);
+  })
+})
+
 app.use((err, req, res, next) => {
   const status = err.status || 500;
   res.status(status).json({ error: err });
