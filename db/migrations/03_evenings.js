@@ -11,7 +11,7 @@ exports.up = function(knex, Promise) {
     table.string('gratitude_4').notNullable().defaultTo('')
     table.string('gratitude_5').notNullable().defaultTo('')
     table.string('gratitude_6').notNullable().defaultTo('')
-    table.text('historical_fact').notNullable().defaultTo('')
+    // table.text('historical_fact').notNullable().defaultTo('')
     table.timestamps(true, true)
   })
 };

@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     table.foreign('user_id').references('users.id').onDelete('CASCADE')
     table.string('date').notNullable().defaultTo('')
     table.boolean('did_make_bed').notNullable().defaultTo('f')
-    table.string('meditation_activity').notNullable().defaultTo('')
+    // table.string('meditation_activity').notNullable().defaultTo('')
     table.string('gratitude_1').notNullable().defaultTo('')
     table.string('gratitude_2').notNullable().defaultTo('')
     table.string('gratitude_3').notNullable().defaultTo('')
@@ -17,6 +17,7 @@ exports.up = function(knex, Promise) {
     table.boolean('had_breakfast').notNullable().defaultTo('f')
     table.boolean('did_exercise').notNullable().defaultTo('f')
     table.text('inspirational_quote').notNullable().defaultTo('')
+    table.text('quote_author').notNullable().defaultTo('')
     table.timestamps(true, true)
   })
 };

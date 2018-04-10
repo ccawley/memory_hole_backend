@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
           user_id: 1,
           date: '4/3/18',
           did_make_bed: true,
-          meditation_activity: 'Hot yoga',
+          // meditation_activity: 'Hot yoga',
           gratitude_1: 'Lorem ipsum dolor sit amet.',
           gratitude_2: 'Tempor incididunt ut labore.',
           gratitude_3: 'Lorem ipsum dolor sit amet.',

@@ -15,7 +15,7 @@ exports.seed = function(knex, Promise) {
           gratitude_4: 'Tempor incididunt ut labore.',
           gratitude_5: 'Lorem ipsum dolor sit amet.',
           gratitude_6: 'Tempor incididunt ut labore.',
-          historical_fact: 'On this day in 1762, Gary Buseys great great great grandfather yelled at a potato so hard the potato broke into pieces and fell in a vat of bubbling oil. He had inadvertantly invented joe joes.',
+          // historical_fact: 'On this day in 1762, Gary Buseys great great great grandfather yelled at a potato so hard the potato broke into pieces and fell in a vat of bubbling oil. He had inadvertantly invented joe joes.',
         }
       ]);
     }).then(() => {
