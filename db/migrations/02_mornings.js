@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
     table.increments('id')
     table.integer('user_id').notNullable()
     table.foreign('user_id').references('users.id').onDelete('CASCADE')
-    table.string('date').notNullable().defaultTo('')
+    // table.string('date').notNullable().defaultTo('')
     table.boolean('did_make_bed').notNullable().defaultTo('f')
     // table.string('meditation_activity').notNullable().defaultTo('')
     table.string('gratitude_1').notNullable().defaultTo('')
