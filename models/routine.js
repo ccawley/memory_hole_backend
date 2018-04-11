@@ -4,12 +4,13 @@ const axios = require('axios')
 
 class Mornings {
   constructor() {}
-
   // Enter morning data into morning table...
-  // static getUser() {
-  //   return knex('users')
-  //   .first();
+  static newMorning(morningData) {
+    return knex('mornings')
+      .insert(morningData)
+      // .returning('*')
   }
+
 }
 
-module.exports = Users
+module.exports = Mornings

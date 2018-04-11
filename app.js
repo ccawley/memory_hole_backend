@@ -15,11 +15,12 @@ const { UsersRouter, Routine } = require('./routes')
 app.use('/user', UsersRouter)
 app.use('/routine', Routine)
 
+// Find a home for this route...
 const axios = require('axios')
 app.get('/quote', (req, res, next) => {
   axios.get('http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en')
   .then((result) => {
-    console.log(result.data);
+    // console.log(result.data);
     res.json(result.data);
   })
 })

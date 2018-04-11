@@ -1,8 +1,21 @@
 const { Routine } = require('../models')
 
-function addMorningData(req, res, next) {
-  console.log(req.body);
-  res.send(200)
+class DataAdder {
+  cosntructor(){
+
+  }
+
+  static addMorningData(req, res, next) {
+    console.log(req.body);
+    // res.send(200)
+
+    Routine.newMorning(req.body)
+      .then(result => {
+        console.log(result)
+        return res.status(201).json({ message: 'You done created a thing.' })
+      })
+      .catch(console.error)
+  }
 }
 
-module.exports = addMorningData
+module.exports = DataAdder

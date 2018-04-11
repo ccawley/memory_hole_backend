@@ -1,4 +1,4 @@
 module.exports = {
-  User: require('./users-model')
+  User: require('./users-model'),
   Routine: require('./routine')
 }
