@@ -7,9 +7,8 @@ class DataAdder {
 
   static addMorningData(req, res, next) {
     console.log(req.body);
-    // res.send(200)
 
-    Routine.newMorning(req.body)
+    Routine.Morning.newMorning(req.body)
       .then(result => {
         console.log(result)
         return res.status(201).json({ message: 'Successfully posted morning data.' })
@@ -19,9 +18,8 @@ class DataAdder {
 
   static addEveningData(req, res, next) {
     console.log(req.body);
-    // res.send(200)
 
-    Routine.newEvening(req.body)
+    Routine.Evening.newEvening(req.body)
       .then(result => {
         console.log(result)
         return res.status(201).json({ message: 'Successfully posted evening data.' })
