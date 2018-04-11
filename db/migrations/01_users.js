@@ -3,9 +3,9 @@ exports.up = function(knex, Promise) {
     table.increments('id')
     table.string('user_name').notNullable().defaultTo('')
     table.string('first_name').notNullable().defaultTo('')
-    table.string('avatar_image_url').notNullable().defaultTo('')
+    // table.string('avatar_image_url').notNullable().defaultTo('')
     table.string('password').notNullable().defaultTo('')
-    table.string('email').notNullable().defaultTo('')
+    // table.string('email').notNullable().defaultTo('')
     table.timestamps(true, true)
   })
 };

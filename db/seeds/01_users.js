@@ -8,9 +8,9 @@ exports.seed = function(knex, Promise) {
           id: 1,
           user_name: 'busey',
           first_name: "Gary",
-          avatar_image_url: 'http://www.azquotes.com/public/pictures/authors/e9/44/e9442df886a00719f3d8d2f51894fcf1/52b9561984d40.jpg',
+          // avatar_image_url: 'http://www.azquotes.com/public/pictures/authors/e9/44/e9442df886a00719f3d8d2f51894fcf1/52b9561984d40.jpg',
           password: "endocrineRip",
-          email: "cawley_21@hotmail.com"
+          // email: "cawley_21@hotmail.com"
         }
       ]);
     }).then(() => {
