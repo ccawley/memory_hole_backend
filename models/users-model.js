@@ -9,6 +9,9 @@ class Users {
     return knex('users')
       .insert(userData)
       .returning('*')
+      .then(([result]) => {
+        return result
+      })
   }
 
   static getUser() {
