@@ -11,8 +11,9 @@ app.disable('x-powered-by');
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-const { UsersRouter } = require('./routes')
+const { UsersRouter, Routine } = require('./routes')
 app.use('/user', UsersRouter)
+app.use('/routine', Routine)
 
 const axios = require('axios')
 app.get('/quote', (req, res, next) => {
