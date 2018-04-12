@@ -1,8 +1,9 @@
-const db = require('../knex.js')
-const knex = require('../knex')
-const axios = require('axios')
+const db = require('../knex.js');
+const knex = require('../knex');
+const axios = require('axios');
+const bcrypt = require('bcryptjs');
 
-class Users {
+class User {
   constructor() {}
 
   static createUser(userData) {
@@ -11,14 +12,28 @@ class Users {
       .returning('*')
       .then(([result]) => {
         return result
-      })
+      });
   }
 
-  static getUser() {
+  getUser(username) {
     return knex('users')
-    .first();
+      .first()
+      .where({username});
+  }
+
+  static tryLoginUser(user_name, password) {
+    return knex('users')
+      .select('*')
+      .first()
+      .where({user_name})
+      .then(queryResult => {
+        if (!queryResult) return false
+        delete queryResult.password
+        return queryResult
+        // return bcrypt.compare(password, queryResult.password)
+      });
   }
 
 }
 
-module.exports = Users
+module.exports = User
