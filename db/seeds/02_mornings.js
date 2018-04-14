@@ -20,7 +20,8 @@ exports.seed = function(knex, Promise) {
           // selfie_url: 'https://lh3.googleusercontent.com/-1s11c-YdLtc/VWdF8ypoweI/AAAAAAAAcXY/9jVu8DOBhvg/s640/blogger-image-2118592173.jpg',
           had_breakfast: true,
           did_exercise: true,
-          inspirational_quote: '"If you put that straight jacket on me, I am going to pull your endocrine system out of your body." ~ Gary Busey'
+          inspirational_quote: '"If you put that straight jacket on me, I am going to pull your endocrine system out of your body."',
+          quote_author: 'Gary Busey'
         }
       ]);
     }).then(() => {
