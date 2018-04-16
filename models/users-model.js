@@ -15,12 +15,6 @@ class User {
       });
   }
 
-  getUser(username) {
-    return knex('users')
-      .first()
-      .where({username});
-  }
-
   static tryLoginUser(user_name, password) {
     return knex('users')
       .select('*')

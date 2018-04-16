@@ -8,7 +8,7 @@ class UsersController {
   static createUser (req, res, next) {
     User.createUser(req.body)
       .then(newUser => {
-        return res.status(201).json(newUser)
+        return res.status(201).json({ message: "New user succesfully created."})
       })
       .catch(console.error)
   }
