@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     table.foreign('user_id').references('users.id').onDelete('CASCADE')
     // table.string('date').notNullable().defaultTo('')
     table.text('journal_entry').notNullable().defaultTo('')
-    // table.string('pic_of_the_day_url').notNullable().defaultTo('')
+    table.string('pic_of_the_day_url').notNullable().defaultTo('')
     table.text('lessons_learned').notNullable().defaultTo('')
     table.text('wins_brags').notNullable().defaultTo('')
     table.string('gratitude_4').notNullable().defaultTo('')
