@@ -12,6 +12,14 @@ exports.seed = function(knex, Promise) {
           password: "123",
           // email: "cawley_21@hotmail.com"
         }
+        // {
+        //   id: 2,
+        //   user_name: 'loopinlouie',
+        //   first_name: "Curtis",
+        //   // avatar_image_url: 'http://www.azquotes.com/public/pictures/authors/e9/44/e9442df886a00719f3d8d2f51894fcf1/52b9561984d40.jpg',
+        //   password: "123",
+        //   // email: "cawley_21@hotmail.com"
+        // }
       ]);
     }).then(() => {
       return knex.raw(
