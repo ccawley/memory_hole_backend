@@ -19,7 +19,7 @@ exports.seed = function(knex, Promise) {
           goal_microtarget_3: 'Practice my presentation at least three times.',
           // selfie_url: 'https://lh3.googleusercontent.com/-1s11c-YdLtc/VWdF8ypoweI/AAAAAAAAcXY/9jVu8DOBhvg/s640/blogger-image-2118592173.jpg',
           had_breakfast: true,
-          did_exercise: False,
+          did_exercise: false,
           inspirational_quote: '"The moment one gives close attention to anything, even a blade of grass, it becomes a mysterious, awesome, indescribably magnificent world in itself."',
           quote_author: 'Henry Miller'
         }
