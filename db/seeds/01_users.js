@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
           user_name: 'kurple',
           first_name: "Curtis",
           // avatar_image_url: 'http://www.azquotes.com/public/pictures/authors/e9/44/e9442df886a00719f3d8d2f51894fcf1/52b9561984d40.jpg',
-          password: "123",
+          password: "$2a$10$DkkHrsCAtABI6WBKln1TluS99aXCyGKerg8aGAAiQPY9Ae4qLN/2q",
           // email: "cawley_21@hotmail.com"
         }
         // {
