@@ -6,7 +6,20 @@ class UsersController {
   constructor() {}
 
   static createUser (req, res, next) {
-    User.createUser(req.body)
+    let { user_name, first_name, password } = req.body
+
+    if (!user_name || !first_name || !password) {
+      return res.status(401).json({ message: "Username, first name, and password required."})
+    }
+
+    User.checkUser(user_name)
+      .then(user => {
+        if (user) {
+          return res.status(400).json({ message: "User already exists!" })
+        }
+        return User.createUser(user_name, first_name, password)
+      })
+      // Have a bug where even if user exists and code above runs, the ultimate result in the terminal is the 201 status below...
       .then(newUser => {
         return res.status(201).json({ message: "New user succesfully created."})
       })
@@ -14,13 +27,12 @@ class UsersController {
   }
 
   static login (req, res, next) {
-    let username = req.body.user_name
-    let password = req.body.password
+    let { user_name, password } = req.body
 
-    if (!username || !password) {
+    if (!user_name || !password) {
       return res.status(401).json({ message: "Username and password required." })
     } else {
-      User.tryLoginUser(username, password)
+      User.tryLoginUser(user_name, password)
       .then(user => {
         return res.status(200).json(user)
       })

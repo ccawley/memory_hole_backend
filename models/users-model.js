@@ -6,13 +6,26 @@ const bcrypt = require('bcryptjs');
 class User {
   constructor() {}
 
-  static createUser(userData) {
+  static createUser(user_name, first_name, password) {
     return knex('users')
-      .insert(userData)
+      .insert({user_name, first_name, password})
       .returning('*')
       .then(([result]) => {
         return result
       });
+  }
+
+  static checkUser(user_name) {
+    return knex('users')
+    .where({user_name})
+    .first()
+    .then(queryResult => {
+      if (queryResult) {
+        delete queryResult.password
+        return queryResult
+      }
+      return queryResult
+    })
   }
 
   static tryLoginUser(user_name, password) {
