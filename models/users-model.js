@@ -1,4 +1,3 @@
-const db = require('../knex.js');
 const knex = require('../knex');
 const axios = require('axios');
 const bcrypt = require('bcryptjs');
@@ -6,15 +5,18 @@ const bcrypt = require('bcryptjs');
 class User {
   constructor() {}
 
+  // Register a new user and hash their password.
   static createUser(user_name, first_name, password) {
+    let hashedPassword = bcrypt.hashSync(password, 10);
     return knex('users')
-      .insert({user_name, first_name, password})
+      .insert({user_name, first_name, password: hashedPassword})
       .returning('*')
       .then(([result]) => {
         return result
       });
   }
 
+  // Check db to see if username is already taken during registration.
   static checkUser(user_name) {
     return knex('users')
     .where({user_name})
@@ -28,6 +30,7 @@ class User {
     })
   }
 
+  // Validate and log a user in.
   static tryLoginUser(user_name, password) {
     return knex('users')
       .select('*')
@@ -35,8 +38,12 @@ class User {
       .where({user_name})
       .then(queryResult => {
         if (!queryResult) return false
-        delete queryResult.password
-        return queryResult
+        if (bcrypt.compareSync(password, queryResult.password)) {
+          delete queryResult.password
+          return queryResult
+        } else {
+          return false
+        }
         // return bcrypt.compare(password, queryResult.password)
       });
   }

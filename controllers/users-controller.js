@@ -34,10 +34,11 @@ class UsersController {
     } else {
       User.tryLoginUser(user_name, password)
       .then(user => {
+        if (user === false) return next({ status: 400, message: "Incorrect password." })
         return res.status(200).json(user)
       })
       .catch(error => {
-        return res.status(500).json({ message: "Incorrect username or password."})
+        return next(error)
       })
     }
   }
