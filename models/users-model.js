@@ -37,14 +37,13 @@ class User {
       .first()
       .where({user_name})
       .then(queryResult => {
-        if (!queryResult) return false
+        if (!queryResult) return 'User does not exist.'
         if (bcrypt.compareSync(password, queryResult.password)) {
           delete queryResult.password
           return queryResult
         } else {
           return false
         }
-        // return bcrypt.compare(password, queryResult.password)
       });
   }
 
